@@ -1,0 +1,288 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  main{
+    font-style: italic;
+  }
+  header{
+    font-style: italic;
+  }
+  footer{
+    display: flex;
+  }
+  .container {
+    display: grid;
+    height: 280vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.08fr 0.05fr 0.4fr 0.05fr 0.3fr 0.05fr 0.5fr 0.05fr 0.5fr 0.05fr 0.2fr 0.05fr 0.15fr;
+    grid-template-areas:
+      "name name name name"
+      "nav nav nav nav"
+      "aboutme aboutme aboutme aboutme"
+      "aboutmeimage aboutmetext aboutmetext aboutmetext"
+      "education education education education"
+      "education_section education_section education_section education_section"
+      "projects projects projects projects"
+      "project1 project2 project3 project4"
+      "experience experience experience experience"
+      "experience1 experience2 experience3 experience4"
+      "blogs blogs blogs blogs"
+      "blogs_section blogs_section blogs_section blogs_section"
+      "contactme contactme contactme contactme"
+      "contactlinks contactlinks contactlinks contactlinks";
+      grid-gap: 0.2rem;    
+  }
+  #name {
+    background: #0cdda9;
+    grid-area: name;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  nav {
+    background: #a7e3ff;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-pad-ding);
+  }
+  
+  #aboutme{
+    background: #84ffa3;
+    grid-area: aboutme;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-size: x-large;
+  }
+  
+   #aboutmeimage{
+   background-color: beige;
+    grid-area: aboutmeimage;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  .rohith-img{
+    object-fit: contain;
+    width: 100%;
+  }
+  #aboutmetext {
+    background: #8b8989;
+    grid-area: aboutmetext;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    text-align: center;
+    font-style: normal;
+    justify-content: center;
+    display:flex;
+    padding: 10px;
+    padding-left: 10px;
+  }
+  #education {
+    background: #84ffa3;
+    grid-area: education;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-style: italic;
+    font-size: x-large;
+  }
+
+  #education_section {
+    background: #8b8989;
+    grid-area: education_section;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    font-style: normal;
+  }
+
+
+  #projects {
+    background: #84ffa3;
+    grid-area: projects;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-size: x-large;
+  }
+  #project1{
+    background: #DBF227;
+    grid-area: project1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+  #project2{
+    background: #DBF227;
+    grid-area: project2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+  #project3{
+    background: #DBF227;
+    grid-area: project3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+  #project4{
+    background: #DBF227;
+    grid-area: project4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+
+
+  #experience {
+    background: #84ffa3;
+    grid-area: experience;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-style: italic;
+    font-size: x-large;
+  }
+
+  #experience1{
+    background: #9FC131;
+    grid-area: experience1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+  #experience2{
+    background: #9FC131;
+    grid-area: experience2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+
+  #experience3{
+    background: #9FC131;
+    grid-area: experience3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+
+  #experience4{
+    background: #9FC131;
+    grid-area: experience4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 10px;
+  }
+  #blogs {
+    background: #84ffa3;
+    grid-area: blogs;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-style: italic;
+    font-size: x-large;
+  }
+  #blogs_section{
+    background: #8b8989;
+    grid-area: blogs_section;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    font-style: normal;
+    padding: 10px;
+  }
+
+  #contactme {
+    background: #84ffa3;
+    grid-area: contactme;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-left: 10px;
+    font-style: italic;
+    font-size: x-large;
+  }
+  #contactlinks{
+    background: #93d4c4;
+    grid-area: contactlinks;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding:20px;
+    justify-content: space-between;
+    
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .navigationparent{
+    margin-top: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+ 
+
+  @media only screen and (max-width: 500px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 0.3fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr 0.3fr 0.2fr 0.3fr;
+      grid-template-areas:
+      "name"
+"nav"
+"aboutme"
+"aboutmeimage"
+"aboutmetext"
+"education"
+"education_section"
+"projects"
+"project1"
+"project2" 
+"project3" 
+"project4"
+"experience"
+"experience1"
+"experience2"
+"experience3"
+"experience4"
+"blogs"
+"blogs_section"
+"contactme"
+"contactlinks";
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 0.3fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr 0.3fr 0.2fr 0.3fr;
+      grid-template-areas:
+      "name"
+      "nav"
+      "aboutme"
+      "aboutmeimage"
+      "aboutmetext"
+      "education"
+      "education_section"
+      "projects"
+      "project1"
+      "project2" 
+      "project3" 
+      "project4"
+      "experience"
+      "experience1"
+      "experience2"
+      "experience3"
+      "experience4"
+      "blogs"
+      "blogs_section"
+      "contactme"
+      "contactlinks";
+    }
+  }
