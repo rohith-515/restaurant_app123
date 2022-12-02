@@ -1,4 +1,4 @@
-{"items": [{
+[{
   "id":1,
   "item_name": "Chicken Biryani",
   "price": 19,
@@ -38,4 +38,4 @@
   "taste": "Spicy",
   "time_to_cook":20,
   "is_it_special": true
-}]}
+}]
