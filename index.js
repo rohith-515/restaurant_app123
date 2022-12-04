@@ -58,6 +58,7 @@ const server = http.createServer((req, res) => {
     else if (req.url==='/api')
     {
      
+        retrieve();
         async function retrieve() {
         const uri = "mongodb+srv://rohith:rohith98@cluster0.kwhh6ne.mongodb.net/?retryWrites=true&w=majority";
         const client = new MongoClient(uri);
@@ -70,9 +71,10 @@ const server = http.createServer((req, res) => {
     
             // Find the listing named "Infinite Views" that we created in create.js
             const result = await client.db("decnine").collection("fourtosix").find({}).toArray();
-            console.log(result);
+            const res_json = JSON.stringify(result);
+            console.log(res_json);
             res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(content);
+            res.end(res_json);
         }
         finally{
 
