@@ -1,6 +1,8 @@
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
+const { MongoClient } = require('mongodb');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     
@@ -55,16 +57,28 @@ const server = http.createServer((req, res) => {
      }
     else if (req.url==='/api')
     {
-        fs.readFile(
-            path.join(__dirname, 'public', 'db.json'),'utf-8',
-                    (err, content) => {
-                                    
-                                    if (err) throw err;
-                                    // Please note the content-type here is application/json
-                                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                                    res.end(content);
-                        }
-              );
+     
+        async function retrieve() {
+        const uri = "mongodb+srv://rohith:rohith98@cluster0.kwhh6ne.mongodb.net/?retryWrites=true&w=majority";
+        const client = new MongoClient(uri);
+        try {
+            // Connect to the MongoDB cluster
+            await client.connect();
+            console.log("connection happened successfully")
+    
+            // Make the appropriate DB calls
+    
+            // Find the listing named "Infinite Views" that we created in create.js
+            const result = await client.db("decnine").collection("fourtosix").find({}).toArray();
+            console.log(result);
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(content);
+        }
+        finally{
+
+        }
+    }
+    retrieve().catch(console.error);    
     }
     else{
         res.writeHead(404, {"Content-Type": "text/html"});
