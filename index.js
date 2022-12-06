@@ -2,7 +2,7 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 const { MongoClient } = require('mongodb');
-const fs = require('fs');
+
 
 const server = http.createServer((req, res) => {
     
@@ -70,9 +70,11 @@ const server = http.createServer((req, res) => {
             // Make the appropriate DB calls
     
             // Find the listing named "Infinite Views" that we created in create.js
-            const result = await client.db("decnine").collection("fourtosix").find({}).toArray();
+            const result = await client.db("restaurant_data").collection("items_data").find({}).toArray();
+
             const res_json = JSON.stringify(result);
             console.log(res_json);
+       //   console.log(res_json);
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(res_json);
         }
@@ -94,6 +96,6 @@ const server = http.createServer((req, res) => {
     /*/
 });
 
-const PORT= process.env.PORT || 6060;
+const PORT= process.env.PORT || 1580;
 
 server.listen(PORT,()=> console.log(`Great our server is running on port ${PORT} `));
