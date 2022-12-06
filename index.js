@@ -60,7 +60,7 @@ const server = http.createServer((req, res) => {
      
         retrieve();
         async function retrieve() {
-        const uri = "mongodb+srv://rohith:rohith98@cluster0.kwhh6ne.mongodb.net/?retryWrites=true&w=majority";
+        const uri = process.env.MONGODB_URI;
         const client = new MongoClient(uri);
         try {
             // Connect to the MongoDB cluster
